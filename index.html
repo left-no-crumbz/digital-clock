@@ -116,9 +116,8 @@ const divSeconds = document.getElementById("seconds");
 const divPeriod = document.getElementById("period");
 const divDate = document.getElementById("date");
 const divDay = document.getElementById("day");
-const date = new Date();
 
-function getDay() {
+function getDay(date) {
     const weekDay = date.getDay();
     console.log(weekDay);
     switch (weekDay) {
@@ -131,7 +130,7 @@ function getDay() {
         case 6: return "SATURDAY";    
     }
 }
-function getMonth() {
+function getMonth(date) {
     const month = date.getMonth();
     switch(month) {
         case 0: return "January";
@@ -151,14 +150,15 @@ function getMonth() {
 }
 
 function getTime() {
+    const date = new Date();
     let hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
     const period = hours >= 12 ? "PM" : "AM"
     const month = getMonth();
-    const dayNum = date.getDate();
+    const dayNum = date.getDate(date);
     const year = date.getFullYear();
-    const weekDay = getDay();
+    const weekDay = getDay(date);
     hours = hours % 12;
     hours = hours ? hours : 12;
     const padHours = String(hours).padStart(2, "0");
