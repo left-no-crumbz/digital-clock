@@ -116,22 +116,22 @@ const divSeconds = document.getElementById("seconds");
 const divPeriod = document.getElementById("period");
 const divDate = document.getElementById("date");
 const divDay = document.getElementById("day");
+const date = new Date();
 
 function getDay() {
-    const date = new Date();
     const weekDay = date.getDay();
+    console.log(weekDay);
     switch (weekDay) {
-        case 0: return "MONDAY";    
-        case 1: return "TUESDAY";    
-        case 2: return "WEDNESDAY";    
-        case 3: return "THURSDAY";    
-        case 4: return "FRIDAY";    
-        case 5: return "SATURDAY";    
-        case 6: return "SUNDAY";    
+        case 0: return "SUNDAY";    
+        case 1: return "MONDAY";    
+        case 2: return "TUESDAY";    
+        case 3: return "WEDNESDAY";    
+        case 4: return "THURSDAY";    
+        case 5: return "FRIDAY";    
+        case 6: return "SATURDAY";    
     }
 }
 function getMonth() {
-    const date = new Date();
     const month = date.getMonth();
     switch(month) {
         case 0: return "January";
@@ -151,7 +151,6 @@ function getMonth() {
 }
 
 function getTime() {
-    const date = new Date();
     let hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
