@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
-    <!-- <script defer async src="./app.js"></script> -->
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
-     <style>
+
+    <style>
+        @font-face {
+        font-family: 'alarm_clockregular';
+        src: url('../alarm-clock-font/alarm_clock-webfont.woff2') format('woff2'),
+            url('../alarm-clock-font/alarm_clock-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -16,13 +23,7 @@
             margin: 0;
         }
 
-        @font-face {
-            font-family: 'alarm_clockregular';
-            src: url('../alarm-clock-font/alarm_clock-webfont.woff2') format('woff2'),
-                url('../alarm-clock-font/alarm_clock-webfont.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+
 
         body {
             display: flex;
@@ -86,7 +87,7 @@
             align-self: flex-start;
             margin-bottom: 2rem;
         }
-     </style>
+    </style>
 </head> 
 <body>
     <div class="container">
